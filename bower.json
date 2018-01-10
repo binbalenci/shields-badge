@@ -1,0 +1,37 @@
+{
+  "name": "shields-badge",
+  "authors": [
+    "Binh Bui <binh@vaadin.com>"
+  ],
+  "description": "A component used to generate shields.io badge for GitHub",
+  "main": "shields-badge.html",
+  "keywords": [
+    "polymer",
+    "web",
+    "component",
+    "custom",
+    "element"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^2.3.1",
+    "paper-input": "^2.0.5",
+    "paper-dropdown-menu": "^2.0.1",
+    "paper-listbox": "^2.0.0",
+    "paper-item": "^2.0.0",
+    "vaadin-dropdown-menu": "^1.0.0-alpha7",
+    "vaadin-list-box": "^1.0.0-alpha7",
+    "vaadin-item": "^2.0.0-alpha3",
+    "paper-swatch-picker": "^2.0.1",
+    "web-animations-js": "^2.3.1"
+  }
+}

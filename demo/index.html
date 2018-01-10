@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="import" href="../shields-badge.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/vaadin-dropdown-menu/vaadin-dropdown-menu.html">
+<link rel="import" href="../bower_components/vaadin-list-box/vaadin-list-box.html">
+<link rel="import" href="../bower_components/vaadin-item/vaadin-item.html">
+<link rel="import" href="../bower_components/paper-swatch-picker/paper-swatch-picker.html">
+<!-- Import the animation so keyframe works -->
+<link rel="import" href="../bower_components/neon-animation/web-animations.html">
+
+<script scr="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+<style media="screen">
+  paper-input {
+    max-width: 400px;
+  }
+
+  .input, .badge {
+    display: inline-block;
+  }
+</style>
+
+<dom-bind>
+  <template>
+    <div class="input">
+      <paper-input always-float-label label="Left Side" value="{{left}}"></paper-input>
+      <paper-input always-float-label label="Right Side" value="{{right}}"></paper-input>
+      <vaadin-dropdown-menu placeholder="Style" value="{{style}}">
+        <template>
+          <vaadin-list-box>
+            <vaadin-item>plastic</vaadin-item>
+            <vaadin-item>flat</vaadin-item>
+            <vaadin-item>flat-square</vaadin-item>
+            <vaadin-item>for-the-badge</vaadin-item>
+            <vaadin-item>social</vaadin-item>
+          </vaadin-list-box>
+        </template>
+      </vaadin-dropdown-menu>
+      <paper-swatch-picker color="{{colora}}"></paper-swatch-picker>
+      <paper-swatch-picker color="{{colorb}}"></paper-swatch-picker>
+    </div>
+
+    <div class="badge">
+      <shields-badge left="[[left]]" right="[[right]]" style="[[style]]" color-a="[[colora]]" color-b="[[colorb]]" redirect="https://vaadin.com/directory"></shields-badge>
+    </div>
+  </template>
+</dom-bind>

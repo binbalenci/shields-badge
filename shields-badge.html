@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+
+<dom-module id="shields-badge">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+    </style>
+    <img src="[[fullLink]]">
+    <!-- <iframe src="[[fullLink]]" width="200" height="40" frameborder="1"></iframe> -->
+  </template>
+  <script>
+    class ShieldsBadge extends Polymer.Element {
+      static get is() {
+        return 'shields-badge';
+      }
+
+      static get properties() {
+        return {
+          left: {
+            type: String,
+            value: 'Vaadin Directory'
+          },
+
+          right: {
+            type: String,
+            value: 'available'
+          },
+
+          style: {
+            type: String
+          },
+
+          colorA: {
+            type: String
+          },
+
+          colorB: {
+            type: String
+          },
+
+          redirect: {
+            type: String
+          },
+
+          fullLink: {
+            type: String,
+            computed: '_computeFullLink(left, right, style, colorA, colorB, redirect)'
+          }
+        }
+      }
+
+      _computeFullLink(left, right, style, colorA, colorB, redirect) {
+        var baseUrl = `https://img.shields.io/badge/${left}-${right}-green.svg?`
+
+        if (colorA) {
+          if (colorA.indexOf("#") == 0) {
+            baseUrl += "&colorA=" + colorA.substr(1)
+          }
+          else {
+            baseUrl += `&colorA=${colorA}`
+          }
+        }
+
+        if (colorB) {
+          if (colorB.indexOf("#") == 0) {
+            baseUrl += "&colorB=" + colorB.substr(1)
+          }
+          else {
+            baseUrl += `&colorB=${colorB}`
+          }
+        }
+
+        if (style) {
+          baseUrl += `&style=${style}`
+        }
+
+        if (redirect) {
+          baseUrl += `&link=${redirect}`
+        }
+
+        return baseUrl;
+      }
+    };
+
+    customElements.define(ShieldsBadge.is, ShieldsBadge);
+  </script>
+</dom-module>
