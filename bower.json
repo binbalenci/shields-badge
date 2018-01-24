@@ -12,7 +12,7 @@
     "custom",
     "element"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "homepage": "",
   "private": true,
   "ignore": [
