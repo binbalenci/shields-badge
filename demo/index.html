@@ -23,6 +23,7 @@
 <dom-bind>
   <template>
     <div class="input">
+      <h3>For Static</h3>
       <paper-input always-float-label label="Left Side" value="{{left}}"></paper-input>
       <paper-input always-float-label label="Right Side" value="{{right}}"></paper-input>
       <vaadin-dropdown-menu placeholder="Style" value="{{style}}">
@@ -38,10 +39,22 @@
       </vaadin-dropdown-menu>
       <paper-swatch-picker color="{{colora}}"></paper-swatch-picker>
       <paper-swatch-picker color="{{colorb}}"></paper-swatch-picker>
+      <h3>For Dynamic</h3>
+      <paper-input always-float-label label="Type" value="{{type}}"></paper-input>
+      <paper-input always-float-label label="Label" value="{{label}}"></paper-input>
+      <paper-input always-float-label label="Prefix" value="{{prefix}}"></paper-input>
+      <paper-input always-float-label label="Suffix" value="{{suffix}}"></paper-input>
+      <paper-input always-float-label label="Query" value="{{query}}"></paper-input>
+      <paper-input always-float-label label="URI" value="{{uri}}"></paper-input>
+      <paper-swatch-picker color="{{colorbdynamic}}"></paper-swatch-picker>
+
     </div>
 
     <div class="badge">
-      <shields-badge left="[[left]]" right="[[right]]" style="[[style]]" color-a="[[colora]]" color-b="[[colorb]]" redirect="https://vaadin.com/directory"></shields-badge>
+      <h3>Static</h3>
+      <shields-badge left="[[left]]" right="[[right]]" style="[[style]]" color-a="[[colora]]" color-b="[[colorb]]"></shields-badge>
+      <h3>Dynamic</h3>
+      <shields-badge dynamic type="[[type]]" label="[[label]]" color-b="[[colorbdynamic]]" prefix="[[prefix]]" suffix="[[suffix]]" query="[[query]]" uri="[[uri]]"></shields-badge>
     </div>
   </template>
 </dom-bind>
