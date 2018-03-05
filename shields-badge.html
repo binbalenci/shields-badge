@@ -48,6 +48,10 @@
 
       static get properties() {
         return {
+          dynamic: {
+            type: Boolean,
+            value: false
+          },
           left: {
             type: String,
             value: 'Vaadin Directory'
@@ -74,43 +78,120 @@
             type: String
           },
 
+          prefix: {
+            type: String
+          },
+
+          suffix: {
+            type: String
+          },
+
+          query: {
+            type: String
+          },
+
+          uri: {
+            type: String
+          },
+
+          type: {
+            type: String,
+            value: "json"
+          },
+
+          label: {
+            type: String
+          },
+
           fullLink: {
             type: String,
-            computed: '_computeFullLink(left, right, style, colorA, colorB, redirect)'
+            computed: '_computeFullLink(dynamic, left, right, style, colorA, colorB, redirect, prefix, suffix, query, uri, type, label)'
           }
         }
       }
 
-      _computeFullLink(left, right, style, colorA, colorB, redirect) {
-        var baseUrl = `https://img.shields.io/badge/${left}-${right}-green.svg?`
+      // static get observers() {
+      //   return [
+      //     "_inputChanged(left, right, style, colorA, colorB, redirect)"
+      //   ];
+      // }
 
-        if (colorA) {
-          if (colorA.indexOf("#") == 0) {
-            baseUrl += "&colorA=" + colorA.substr(1)
+      _computeFullLink(dynamic, left, right, style, colorA, colorB, redirect, prefix, suffix, query, uri, type, label) {
+        if (!dynamic) {
+          var baseUrl = `https://img.shields.io/badge/${left}-${right}-green.svg?`
+
+          if (colorA) {
+            if (colorA.indexOf("#") == 0) {
+              baseUrl += "&colorA=" + colorA.substr(1)
+            }
+            else {
+              baseUrl += `&colorA=${colorA}`
+            }
           }
-          else {
-            baseUrl += `&colorA=${colorA}`
+
+          if (colorB) {
+            if (colorB.indexOf("#") == 0) {
+              baseUrl += "&colorB=" + colorB.substr(1)
+            }
+            else {
+              baseUrl += `&colorB=${colorB}`
+            }
           }
-        }
 
-        if (colorB) {
-          if (colorB.indexOf("#") == 0) {
-            baseUrl += "&colorB=" + colorB.substr(1)
+          if (style) {
+            baseUrl += `&style=${style}`
           }
-          else {
-            baseUrl += `&colorB=${colorB}`
+
+          if (redirect) {
+            baseUrl += `&link=${redirect}`
           }
-        }
 
-        if (style) {
-          baseUrl += `&style=${style}`
-        }
+          return baseUrl;
+        } else {
+          var baseUrl = `https://img.shields.io/badge/dynamic/${type}.svg?`
 
-        if (redirect) {
-          baseUrl += `&link=${redirect}`
-        }
+          if (colorB) {
+            if (colorB.indexOf("#") == 0) {
+              baseUrl += "&colorB=" + colorB.substr(1)
+            }
+            else {
+              baseUrl += `&colorB=${colorB}`
+            }
+          }
 
-        return baseUrl;
+          if (label) {
+            baseUrl += `&label=${label}`
+          }
+
+          if (prefix) {
+            baseUrl += `&prefix=${prefix}`
+          }
+
+          if (suffix) {
+            baseUrl += `&suffix=${suffix}`
+          }
+
+          if (query) {
+            baseUrl += `&query=${query}`
+          }
+
+          if (uri) {
+            uri = encodeURIComponent(uri)
+            baseUrl += `&uri=${uri}`
+          }
+
+          return baseUrl;
+        }
+      }
+
+      copyToClipboard() {
+        var $temp = document.createElement("input");
+        var textNode = this.$.p1;
+        document.body.appendChild($temp);
+        $temp.value = textNode.textContent;
+        $temp.select();
+        document.execCommand("copy");
+        $temp.remove();
       }
     };
 
