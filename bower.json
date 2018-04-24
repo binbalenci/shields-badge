@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "^2.0.0",
+    "polymer": "^2.0.0"
   },
   "devDependencies": {
     "paper-input": "^2.0.5",
