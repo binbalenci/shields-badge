@@ -1,16 +1,17 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/binhbbui411/shields-badge)   
-[![Published on vaadin.com/directory](https://img.shields.io/badge/Vaadin%20Directory-published-blue.svg?colorB=00b4f0)](https://vaadin.com/directory/component/binhbbui411shields-badge)
-[![Star on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
-[![Rating on vaadin.com/directory](https://img.shields.io/vaadin-directory/rating/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
-[![Rating count on vaadin.com/directory](https://img.shields.io/vaadin-directory/rc/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
-[![Latest version on vaadin.com/directory](https://img.shields.io/vaadin-directory/v/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
-[![Latest release date on vaadin.com/directory](https://img.shields.io/vaadin-directory/rd/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/binhbbbb/shields-badge)   
+Vaadin Directory:
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
+[![Star on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/binhbbbbshields-badge.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
+[![Rating on vaadin.com/directory](https://img.shields.io/vaadin-directory/rating/binhbbbbshields-badge.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
+[![Rating count on vaadin.com/directory](https://img.shields.io/vaadin-directory/rc/binhbbbbshields-badge.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
+[![Latest version on vaadin.com/directory](https://img.shields.io/vaadin-directory/v/binhbbbbshields-badge.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
+[![Latest release date on vaadin.com/directory](https://img.shields.io/vaadin-directory/rd/binhbbbbshields-badge.svg)](https://vaadin.com/directory/component/binhbbbbshields-badge)
 
 # &lt;shields-badge&gt;
 
 [Live Demo ↗]()
 
-[&lt;shields-badge&gt;](https://vaadin.com/directory/component/binhbbui411shields-badge) is a [Polymer 2](http://polymer-project.org) web component for generating badge using shields.io services.
+[&lt;shields-badge&gt;](https://vaadin.com/directory/component/binhbbbbshields-badge) is a [Polymer 2](http://polymer-project.org) web component for generating badge using shields.io services.
 
 <!--
 ```
