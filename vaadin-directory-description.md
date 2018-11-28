@@ -1,10 +1,10 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/binhbbui411/shields-badge)  
 [![Published on vaadin.com/directory](https://img.shields.io/badge/Vaadin%20Directory-published-blue.svg?colorB=00b4f0)](https://vaadin.com/directory/component/binhbbui411shields-badge)
 [![Star on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
 [![Rating on vaadin.com/directory](https://img.shields.io/vaadin-directory/rating/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
 [![Rating count on vaadin.com/directory](https://img.shields.io/vaadin-directory/rc/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
 [![Latest version on vaadin.com/directory](https://img.shields.io/vaadin-directory/v/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
 [![Latest release date on vaadin.com/directory](https://img.shields.io/vaadin-directory/rd/binhbbui411shields-badge.svg)](https://vaadin.com/directory/component/binhbbui411shields-badge)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/binhbbui411/shields-badge)
 
 # &lt;shields-badge&gt;
 
